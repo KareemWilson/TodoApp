@@ -1,6 +1,6 @@
 [submodule "Todo-backend"]
 	path = Todo-backend
-	url = https://github.com/KareemWilson/Todo-backend/tree/main
+	url = https://github.com/KareemWilson/Todo-backend.git
 	branch = main
 [submodule "Todo-mobile"]
 	path = Todo-mobile

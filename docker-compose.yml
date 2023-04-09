@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: postgres
+
+  backend:
+    build: ./Todo-backend
+    volumes:
+      - ./Todo-backend:/app
+    restart: always
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@db:5432/mydb?schema=public
+
+
+  mobile:
+    build: ./Todo-mobile
+    volumes:
+      - ./Todo-mobile:/app:rw
+    restart: always
+    depends_on:
+      - backend
+    ports:
+      - "19000:19000"
+      - "19001:19001"
+      - "19002:19002"
+

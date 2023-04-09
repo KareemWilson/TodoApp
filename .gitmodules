@@ -4,3 +4,6 @@
 [submodule "Todo-backend"]
 	path = Todo-backend
 	url = https://github.com/KareemWilson/Todo-backend
+[submodule "Todo-mobile"]
+	path = Todo-mobile
+	url = https://github.com/KareemWilson/Todo-mobile.git
